@@ -38,6 +38,19 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${basedir}/src/test/testng-unit.xml</suiteXmlFile>
                     </suiteXmlFiles>
+
+                    <!-- maven surefire based configuration, yields the same result -->
+
+                    <!--<includes>-->
+                        <!--<include>**/*.java</include>-->
+                    <!--</includes>-->
+                    <!--<excludedGroups>integration</excludedGroups>-->
+                    <!--<properties>-->
+                        <!--<property>-->
+                            <!--<name>listener</name>-->
+                            <!--<value>com.test.listener.InterleavingDetector</value>-->
+                        <!--</property>-->
+                    <!--</properties>-->
                 </configuration>
             </plugin>
             <plugin>
