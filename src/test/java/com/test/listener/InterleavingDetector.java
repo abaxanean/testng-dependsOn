@@ -25,6 +25,5 @@ public class InterleavingDetector implements IInvokedMethodListener {
     }
 
     public void afterInvocation(final IInvokedMethod method, final ITestResult testResult) {
-
     }
 }
