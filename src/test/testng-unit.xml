@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- Unite tests -->
+<suite name="suite" verbose="10">
+    <test name="unit tests">
+        <groups>
+            <run>
+                <exclude name="integration"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.test.*"/>
+        </packages>
+    </test>
+
+    <listeners>
+        <listener class-name="com.test.listener.InterleavingDetector"/>
+    </listeners>
+</suite>
