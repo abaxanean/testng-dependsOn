@@ -14,7 +14,6 @@ public class Test1 {
 
     }
 
-
     @Test(dependsOnMethods = "test1")
     public void test2() {
 

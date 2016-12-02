@@ -11,9 +11,7 @@ import org.testng.annotations.Test;
 public class Test21 extends Test2 {
 
     @Test
-    public void test1() {
-
+    public void test21() {
     }
-
 
 }

@@ -1,8 +1,3 @@
-/*
- * Copyright 2016 MobileIron, Inc.
- * All rights reserved.
- */
-
 package com.test.listener;
 
 import java.util.HashSet;
