@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
+import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 
 public class InterleavingDetector implements IInvokedMethodListener {
@@ -13,8 +14,9 @@ public class InterleavingDetector implements IInvokedMethodListener {
     Set<String> clazzes = new HashSet<>();
 
     public void beforeInvocation(final IInvokedMethod method, final ITestResult testResult) {
-        String claz = testResult.getMethod().getTestClass().getRealClass().getSimpleName();
-        System.out.print(claz + '#' + testResult.getMethod().getMethodName());
+        ITestNGMethod testNgMethod = method.getTestMethod();
+        String claz = testNgMethod.getTestClass().getRealClass().getSimpleName();
+        System.out.print(claz + '#' + testNgMethod.getMethodName());
         if (!claz.equals(clazz)) {
             clazz = claz;
             if (!clazzes.add(claz)) {

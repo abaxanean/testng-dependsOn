@@ -14,5 +14,6 @@
 
     <listeners>
         <listener class-name="com.test.listener.InterleavingDetector"/>
+        <listener class-name="com.test.listener.MyMethodInterceptor"/>
     </listeners>
 </suite>
